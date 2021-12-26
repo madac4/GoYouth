@@ -1,0 +1,24 @@
+.category{
+    &--column{
+        .category__container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 20px;
+            @media (max-width: $tablet) {
+                grid-template-columns: repeat(2,1fr);
+            }
+            @media (max-width: $mobileMedium) {
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+
+    }
+    &--row{
+        .category__container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+}

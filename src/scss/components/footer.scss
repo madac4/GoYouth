@@ -1,0 +1,35 @@
+.footer {
+    &__container--first{
+        @include adaptiv-value('padding-top', 100, 40, 1);
+        @include adaptiv-value('margin-top', 100, 40, 1);
+        border-top: 1px solid $linecolor;
+    }
+    &__text {
+        text-align: center;
+        @include adaptiv-value('padding-top', 24, 15, 1);
+        @include adaptiv-value('padding-bottom', 24, 15, 1);
+        background: #DFE3F8;
+        h6 {
+            margin: 0 auto;
+            max-width: 1120px;
+            line-height: 156%;
+            font-size: 16px;
+            font-weight: bold;
+            @include adaptiv-value('font-size', 16, 14, 1);
+        }
+    }
+    &__partners {
+        margin-top: 16px;
+        @include adaptiv-value('margin-bottom', 64, 30, 1);
+        display: flex;
+        align-items: center;
+        overflow: auto;
+        gap: 20px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y: scroll;
+    }
+    &__partners::-webkit-scrollbar {
+        display: none;
+    }
+}

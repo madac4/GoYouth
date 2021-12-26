@@ -1,0 +1,43 @@
+.form-sidebar {
+    width: 100%;
+    box-shadow: $shadow;
+    @include adaptiv-value('padding', 32, 15, 1);
+    background-color: #fff;
+    border-radius: 4px;
+    height: fit-content;
+    margin-top: 20px;
+    &__logo {
+        margin-bottom: 32px;
+    }
+    &__contacts {
+        margin-bottom: 32px;
+        p {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: $gray500;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        a {
+            transition: .3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+            img {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+}

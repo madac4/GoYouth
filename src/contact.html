@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'GoYouth+ - Contacte'})
+
+<body>
+    <div class="wrapper">
+        @@include('./components/header.html')
+        <main>
+            @@include('./components/page-header.html', {'pageTitle': 'Contacte'})
+            <section class="contact-block">
+                <div class="contact-block__container">
+                    <form action="#" class="contact-block__form">
+                        <label for="name">
+                            Numele
+                            <input type="text" id="name" name="name">
+                        </label>
+                        <label for="email">
+                            Email
+                            <input type="email" id="email" name="email">
+                        </label>
+                        <label for="phone">
+                            Telefon
+                            <input type="tel" id="phone" name="phone">
+                        </label>
+                        <label for="message">
+                            Mesaj
+                            <textarea name="message" id="message"></textarea>
+                        </label>
+                        <button class="outline" type="submit">
+                            Trimite
+                            <svg width="8" height="13" viewBox="0 0 8 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 1.91L1.52227 0.5L8 6.5L1.52227 12.5L0 11.09L4.94467 6.5L0 1.91Z"
+                                    fill="#2926B5" />
+                            </svg>
+                        </button>
+                    </form>
+                    @@include('./components/form-sidebar.html')
+                </div>
+            </section>
+        </main>
+        @@include('./components/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

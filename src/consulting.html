@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'GoYouth+ - Centru online de consultanță'})
+
+<body>
+    <div class="wrapper">
+        @@include('./components/header.html')
+        <main>
+            @@include('./components/page-header.html', {'pageTitle': 'Centru online de consultanță'})
+
+            <section class="contact-block">
+                <div class="__container">
+                    <p>
+                        Locul desfășurării: sediul AO Henri Capitant de Cultură Juridică – Centru unic de consultanță
+                        online în cadrul proiectului GoYouth+ a tinerilor NEET întreprinzători, care deja au început o
+                        activitate profesională.
+                    </p>
+                    <p>
+                        Numărul de participanți: 150 de tineri antreprenori asistați pe toată durata proiectului, 20 de
+                        tineri în mentorat în cadrul proiectului GoYouth+.
+                        Metodologia: Centru unic de consultanță online în cadrul proiectului GoYouth+ a tinerilor NEET
+                        va fi destinat deja tinerilor antreprenori existenți în localitate sau care deja au deschis o
+                        afacere în baza instruirilor în cadrul proiectului GoYouth+ și va avea drept scop de a stabili o
+                        comunicare la distanță telefonic sau prin email în ceea ce ține de dezvoltarea unei afaceri
+                        sociale sau consultarea juridică în domenii specifice de activitate. Pentru buna implementarea a
+                        obiectivelor acestui Centru unic de consultanță online, se propune de a identifica 20 de tineri
+                        în mentorat ce vor dezvolta cel puțin 5 afaceri.
+                    </p>
+                </div>
+                <div class="contact-block__container">
+                    <form action="#" class="contact-block__form">
+                        <label for="name">
+                            Numele
+                            <input type="text" id="name" name="name">
+                        </label>
+                        <label for="email">
+                            Email
+                            <input type="email" id="email" name="email">
+                        </label>
+                        <label for="phone">
+                            Telefon
+                            <input type="tel" id="phone" name="phone">
+                        </label>
+                        <label for="message">
+                            Mesaj
+                            <textarea name="message" id="message"></textarea>
+                        </label>
+                        <button class="outline" type="submit">
+                            Trimite
+                            <svg width="8" height="13" viewBox="0 0 8 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 1.91L1.52227 0.5L8 6.5L1.52227 12.5L0 11.09L4.94467 6.5L0 1.91Z"
+                                    fill="#2926B5" />
+                            </svg>
+                        </button>
+                    </form>
+                    @@include('./components/form-sidebar.html')
+                </div>
+            </section>
+        </main>
+        @@include('./components/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

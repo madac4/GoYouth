@@ -1,0 +1,24 @@
+.sidebar {
+    width: 100%;
+    box-shadow: $shadow;
+    &__header {
+        background-color: #2926B5;
+        h5 {
+            color: #fff;
+            text-align: center;
+            @include adaptiv-value('padding-top', 32, 20, 1);
+            @include adaptiv-value('padding-bottom', 32, 20, 1);
+        }
+    }
+    &__body {
+        @include adaptiv-value('padding', 32, 20, 1);
+        p {
+            color: $gray500;
+        }
+        img {
+            margin: 0 auto;
+            display: block;
+            margin-top: 32px;
+        }
+    }
+}

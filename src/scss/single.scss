@@ -1,0 +1,24 @@
+.post-single{
+    &__container{
+        h2{
+            text-align: left
+        }
+        p{
+            @include adaptiv-value('font-size', 16, 14, 1);
+            @include adaptiv-value('margin-bottom', 32, 16, 1);
+        }
+        strong{
+            margin-bottom: 15px;
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+    &__image{
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 32px;
+    }
+    &__download{
+        max-width: 165px;
+    }
+}

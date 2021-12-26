@@ -1,0 +1,10 @@
+.contact-block{
+    .__container{
+        @include adaptiv-value('margin-bottom', 64, 30, 1);
+        p{
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 156%;
+        }
+    }
+}
