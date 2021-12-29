@@ -1,12 +1,12 @@
 export function isWebp() {
     function testWebP(callback) {
         let webP = new Image();
-        webP.onload = webP.onerror = function() {
+        webP.onload = webP.onerror = function () {
             callback(webP.height == 2);
         };
         webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
     }
-    testWebP(function(support) {
+    testWebP(function (support) {
         if (support == true) {
             document.querySelector('body').classList.add('webp');
         } else {
@@ -24,22 +24,22 @@ export function burger(burger, menu) {
 }
 
 export const isMobile = {
-    Android: function() {
+    Android: function () {
         return navigator.userAgent.match(/Android/i);
     },
-    BlackBerry: function() {
+    BlackBerry: function () {
         return navigator.userAgent.match(/BlackBerry/i);
     },
-    iOS: function() {
+    iOS: function () {
         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     },
-    Opera: function() {
+    Opera: function () {
         return navigator.userAgent.match(/Opera Mini/i);
     },
-    Windows: function() {
+    Windows: function () {
         return navigator.userAgent.match(/IEMobile/i);
     },
-    any: function() {
+    any: function () {
         return (
             isMobile.Android() ||
             isMobile.BlackBerry() ||

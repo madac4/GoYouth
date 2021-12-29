@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ellipsis: '…',
         responsive: true,
         className: '.article-horizontal__title',
-        lines: 2,
+        lines: 1,
     });
 
     Ellipsis({

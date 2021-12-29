@@ -12,4 +12,5 @@ export const zip = () => {
         ))
         .pipe(zipPlugin(`${app.path.rootFolder}.zip`))
         .pipe(app.gulp.dest('./'));
+
 }

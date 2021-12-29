@@ -1,6 +1,6 @@
 export let configFTP = {
-    host: '',
-    user: '',
-    password: '',
+    host: 'haitinere.kurama.xyz',
+    user: 'haitinere',
+    password: 'qshwK5xQp',
     parallel: 5
 }

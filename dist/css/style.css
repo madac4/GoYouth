@@ -199,6 +199,12 @@ textarea {
   resize: none;
 }
 
+button {
+  padding: 16px 0;
+  display: block;
+  width: 100%;
+}
+
 button.outline,
 a.outline {
   display: -webkit-box;
@@ -296,7 +302,7 @@ a.outline:hover svg path {
 }
 
 .article-horizontal__header h6 {
-  max-width: 78%;
+  max-width: 80%;
 }
 
 .article-horizontal__header span {
@@ -356,7 +362,7 @@ a.outline:hover svg path {
 
 .article-vertical__image img {
   width: 100%;
-  height: 150px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -470,6 +476,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: auto;
   gap: 20px;
   -ms-overflow-style: none;
@@ -1428,6 +1437,7 @@ body._pc .header .menu-header__item--submenu:hover .menu-submenu {
     height: calc(100% - 100px);
     overflow: auto;
     right: -100%;
+    z-index: 5;
     top: 102px;
     background-color: #fff;
     width: 100%;

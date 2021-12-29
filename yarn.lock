@@ -3002,7 +3002,7 @@ gulp-version-number@latest:
     fs-path "^0.0.24"
     map-stream "^0.0.7"
 
-gulp-webp-html-nosvg@latest:
+gulp-webp-html-nosvg@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gulp-webp-html-nosvg/-/gulp-webp-html-nosvg-1.0.1.tgz#dfae52df0937ed24dc281c9c65dfaf960f2b6c48"
   integrity sha512-Ui8FcKD/P9DwVpYDyJ7IUH8d5/T/8gE8UbdYnbjUJQ7rwabwLtckS7Q1wefOqg5cPm8Wm6odx5bwAe7xaXi0tw==

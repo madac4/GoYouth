@@ -38,7 +38,7 @@
         "gulp-ttf2woff2": "latest",
         "gulp-util": "latest",
         "gulp-version-number": "latest",
-        "gulp-webp-html-nosvg": "latest",
+        "gulp-webp-html-nosvg": "^1.0.1",
         "gulp-webpcss": "latest",
         "gulp-zip": "latest",
         "sass": "latest",
