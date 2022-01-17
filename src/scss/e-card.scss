@@ -1,0 +1,123 @@
+.post-single {
+    time {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 32px;
+        display: block;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin-bottom: 32px;
+    }
+    &__related {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+    .megatabs {
+        display: grid;
+        grid-template-columns: 265px 1fr;
+        @include adaptiv-value('margin-bottom', 50, 30, 1);
+        @include adaptiv-value('grid-gap', 20, 10, 1);
+        @media (max-width: $tablet) {
+            grid-template-columns: 200px 1fr;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+        &-sidebar {
+            &__list {
+                li {
+                    cursor: pointer;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 179%;
+                    text-transform: uppercase;
+                    transition: .3s;
+                    &.megatabs__button--active {
+                        color: $accentcolor;
+                    }
+                    &:hover {
+                        color: $accentcolor;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+        &-content {
+            background-color: #fff;
+            box-shadow: 0px 7px 50px rgba(61, 75, 92, 0.1);
+            border-radius: 4px;
+            @include adaptiv-value('padding', 32, 16, 1);
+            .megatabs-control {
+                background-color: $accentcolor;
+                border-radius: 4px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include adaptiv-value('gap', 32, 16, 1);
+                @include adaptiv-value('margin-bottom', 32, 16, 1);
+                &__arrow {
+                    max-width: 8px;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                    }
+                    &--prev {
+                        transform: rotate(180deg) translateY(2px);
+                    }
+                    &--next {
+                        transform: translateY(1px);
+                    }
+                }
+                &__info {
+                    display: block;
+                    margin-bottom: 0;
+                    text-transform: capitalize;
+                    text-align: justify;
+                    color: #FFFFFF;
+                    span {}
+                }
+            }
+            .megatabs-body {
+                &__slide {
+                    max-height: 325px;
+                    overflow: auto;
+                    padding-right: 16px;
+                    display: none;
+                    &.megatabs__slide--active {
+                        display: block;
+                    }
+                    p {}
+                }
+            }
+            .megatabs-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &__arrow {
+                    max-width: 8px;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                    }
+                    &--prev {
+                        transform: rotate(180deg);
+                    }
+                    &--next {}
+                }
+            }
+        }
+    }
+}

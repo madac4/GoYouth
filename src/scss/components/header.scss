@@ -17,6 +17,14 @@
         &__logo {
             a {
                 display: block;
+                img{
+                    width: 120%;
+                }
+            }
+            &--ue{
+                img{
+                    width: 85px !important;
+                }
             }
         }
         &__text {
@@ -28,6 +36,9 @@
                 display: none;
             }
         }
+    }
+    .header-menu__body{
+        background-color: #DFE3F8;
     }
     .menu-header {
         padding: 10px 0;

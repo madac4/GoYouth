@@ -99,4 +99,133 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         document.querySelector(`.tabs__image[data-tabs-target="${path}"]`).classList.add('tabs__image--active');
     }
+
+    const megaTabsControl = document.querySelector('.megatabs-control');
+    const megaTabsFooter = document.querySelector('.megatabs-footer');
+    const megaTabsButtons = document.querySelectorAll('.megatabs__button');
+    const megaTabsContents = document.querySelectorAll('.megatabs-body__slide');
+    const currentTab = document.querySelector('.megatabs-control .current');
+    const allTabs = document.querySelector('.megatabs-control .full');
+
+    if (megaTabsButtons) {
+        for (let i = 0; i < megaTabsButtons.length; i++) {
+            megaTabsButtons[i].addEventListener('click', () => {
+                megaTabsHandler(i)
+                currentTab.innerHTML = i + 1;
+            })
+        }
+
+        megaTabsControl.addEventListener('click', (e) => {
+            if (e.target.classList.contains('megatabs-control__arrow--prev')) {
+                let activeButton = document.querySelector('.megatabs__button--active');
+                if (activeButton.previousElementSibling !== null) {
+                    activeButton.classList.remove('megatabs__button--active');
+                    activeButton.previousElementSibling.classList.add('megatabs__button--active');
+                }
+
+                let allButtons = activeButton.parentNode.querySelectorAll('li');
+                for (let i = 0; i < allButtons.length; i++) {
+                    if (allButtons[i].classList.contains('megatabs__button--active')) {
+                        currentTab.innerHTML = ++i;
+                    }
+                }
+
+                let activeContent = document.querySelector('.megatabs__slide--active');
+                if (activeContent.previousElementSibling !== null) {
+                    activeContent.classList.remove('megatabs__slide--active');
+                    activeContent.previousElementSibling.classList.add('megatabs__slide--active');
+                }
+            }
+
+            if (e.target.classList.contains('megatabs-control__arrow--next')) {
+                let activeButton = document.querySelector('.megatabs__button--active');
+                if (activeButton.nextElementSibling !== null) {
+                    activeButton.classList.remove('megatabs__button--active');
+                    activeButton.nextElementSibling.classList.add('megatabs__button--active');
+                }
+
+                let allButtons = activeButton.parentNode.querySelectorAll('li');
+                for (let i = 0; i < allButtons.length; i++) {
+                    if (allButtons[i].classList.contains('megatabs__button--active')) {
+                        currentTab.innerHTML = ++i;
+                    }
+                }
+
+                let activeContent = document.querySelector('.megatabs__slide--active');
+                if (activeContent.nextElementSibling !== null) {
+                    activeContent.classList.remove('megatabs__slide--active');
+                    activeContent.nextElementSibling.classList.add('megatabs__slide--active');
+                }
+            }
+        })
+
+        megaTabsFooter.addEventListener('click', (e) => {
+            if (e.target.classList.contains('megatabs-footer__arrow--prev')) {
+                let activeButton = document.querySelector('.megatabs__button--active');
+
+                let allButtons = activeButton.parentNode.querySelectorAll('li');
+                for (let i = 0; i < allButtons.length; i++) {
+                    if (allButtons[i].classList.contains('megatabs__button--active')) {
+                        currentTab.innerHTML = i;
+                    }
+                }
+
+                if (activeButton.previousElementSibling !== null) {
+                    activeButton.classList.remove('megatabs__button--active');
+                    activeButton.previousElementSibling.classList.add('megatabs__button--active');
+                }
+
+                let activeContent = document.querySelector('.megatabs__slide--active');
+                if (activeContent.previousElementSibling !== null) {
+                    activeContent.classList.remove('megatabs__slide--active');
+                    activeContent.previousElementSibling.classList.add('megatabs__slide--active');
+                }
+            }
+
+            if (e.target.classList.contains('megatabs-footer__arrow--next')) {
+                let activeButton = document.querySelector('.megatabs__button--active');
+                if (activeButton.nextElementSibling !== null) {
+                    activeButton.classList.remove('megatabs__button--active');
+                    activeButton.nextElementSibling.classList.add('megatabs__button--active');
+                }
+
+                let allButtons = activeButton.parentNode.querySelectorAll('li');
+                for (let i = 0; i < allButtons.length; i++) {
+                    if (allButtons[i].classList.contains('megatabs__button--active')) {
+                        currentTab.innerHTML = ++i;
+                    }
+                }
+
+                let activeContent = document.querySelector('.megatabs__slide--active');
+                if (activeContent.nextElementSibling !== null) {
+                    activeContent.classList.remove('megatabs__slide--active');
+                    activeContent.nextElementSibling.classList.add('megatabs__slide--active');
+                }
+            }
+        })
+
+        allTabs.innerHTML = megaTabsContents.length;
+    }
+
+    const megaTabsHandler = (order) => {
+        megaTabsButtons.forEach(button => {
+            button.classList.remove('megatabs__button--active')
+        })
+        megaTabsButtons[order].classList.add('megatabs__button--active');
+
+        megaTabsContents.forEach(content => {
+            content.classList.remove('megatabs__slide--active')
+        })
+        megaTabsContents[order].classList.add('megatabs__slide--active');
+    }
+
 })
+
+const mainArticles = document.querySelector('.main-about__articles .main-articles__article');
+const mainArticlesParent = document.querySelector('.main-about__articles');
+
+if (mainArticlesParent) {
+    const articleArea = mainArticles.scrollHeight * 3;
+    mainArticlesParent.style.maxHeight = `${articleArea}px`;
+    mainArticlesParent.style.overflow = `auto`;
+}
